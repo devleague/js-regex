@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/devleague/js-regex/issues"
   },
-  "homepage": "https://github.com/devleague/js-regex"
+  "homepage": "https://github.com/devleague/js-regex",
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  }
 }

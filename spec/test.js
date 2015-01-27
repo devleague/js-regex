@@ -34,7 +34,7 @@ describe('the cloud', function() {
 
   // CHALLENGE
   // it('can replace any string with any other string', function() {
-  //   var result = regexExercise.replaceWith('developers developers developers', 'developers', 'designers');
+  //   var result = regexExercise.replaceWords('developers developers developers', 'developers', 'designers');
   //   result.should.equal('designers designers designers');
   // });
 });

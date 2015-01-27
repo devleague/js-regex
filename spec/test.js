@@ -12,6 +12,11 @@ describe('the cloud', function() {
     result.should.equal(2);
   });
 
+  it('only finds cloud surrounded by a word boundary', function() {
+    var result = regexExercise.findCloud('<a href="http://www.cloud.com">A cloud url</a>');
+    result.should.equal(1);
+  });
+
   it('finds instances of cloud when it is capitalized', function() {
     var result = regexExercise.findCloud('Cloud from Final Fantasy VII');
     result.should.equal(1);
@@ -22,15 +27,15 @@ describe('the cloud', function() {
     result.should.equal('The box is in the box');
   });
 
-  // CHALLENGE
-  // it('replaces the cloud with another string (maintains case)', function() {
-  //   var result = regexExercise.replaceCloud('Cloud is in the cloud', 'box');
-  //   result.should.equal('Box is in the box');
-  // });
+  it('replaces the cloud with another string (maintains case)', function() {
+    var result = regexExercise.replaceCloud('Cloud is in the cloud', 'box');
+    result.should.equal('Box is in the box');
+  });
 
+  // CHALLENGE
   // it('can replace any string with any other string', function() {
-  //   var result = regexExercise.replaceWith('developers developers developers', 'elopers', 'ops');
-  //   result.should.equal('devops devops devops');
+  //   var result = regexExercise.replaceWith('developers developers developers', 'developers', 'designers');
+  //   result.should.equal('designers designers designers');
   // });
 });
 

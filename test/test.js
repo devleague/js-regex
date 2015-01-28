@@ -27,7 +27,7 @@ describe('the cloud', function() {
     result.should.equal('The box is in the box');
   });
 
-  it('replaces the cloud with another string (maintains case)', function() {
+  it('replaces the cloud with another string (maintains capitalization)', function() {
     var result = regexExercise.replaceCloud('Cloud is in the cloud', 'box');
     result.should.equal('Box is in the box');
   });

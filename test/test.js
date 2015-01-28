@@ -13,7 +13,7 @@ describe('the cloud', function() {
   });
 
   it('only finds cloud surrounded by a word boundary', function() {
-    var result = regexExercise.findCloud('<a href="http://www.cloud.com">A cloud url</a>');
+    var result = regexExercise.findCloud('A lone cloud on a cloudy day');
     result.should.equal(1);
   });
 

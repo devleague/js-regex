@@ -22,12 +22,12 @@ describe('the cloud', function() {
     result.should.equal(1);
   });
 
-  it('replaces the cloud with something else', function() {
+  it('replaces all instances of cloud with another string', function() {
     var result = regexExercise.replaceCloud('The cloud is in the cloud', 'box');
     result.should.equal('The box is in the box');
   });
 
-  it('replaces the cloud with another string (maintains capitalization)', function() {
+  it('replaces all instances of cloud with another string (maintains capitalization)', function() {
     var result = regexExercise.replaceCloud('Cloud is in the cloud', 'box');
     result.should.equal('Box is in the box');
   });

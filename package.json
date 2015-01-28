@@ -4,7 +4,7 @@
   "description": "Just some Regex exercises",
   "main": "index.js",
   "scripts": {
-    "test": "mocha spec/"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

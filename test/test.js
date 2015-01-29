@@ -49,34 +49,34 @@ describe('the cloud', function() {
 describe('emails', function() {
   it('fetches an email', function() {
     var result = contactExercise.findEmails('My email is test@test.com');
-    result.should.equal(["test@test.com"]);
+    result.should.deep.equal(["test@test.com"]);
   });
 
   it('fetches all emails', function() {
     var result = contactExercise.findEmails('Please contact us at test@test.com, test1@test.com');
-    result.should.equal(['test@test.com', 'test1@test.com']);
+    result.should.deep.equal(['test@test.com', 'test1@test.com']);
   });
 
   it('does not match using @ as shorthand', function() {
     var result = contactExercise.findEmails('Meet me @ Waikiki');
-    result.should.equal([]);
+    result.should.deep.equal([]);
   });
 
   it('does not fetch Twitter handles', function() {
     var result = contactExercise.findEmails('Follow @brendaneich on Twitter');
-    result.should.equal([]);
+    result.should.deep.equal([]);
   });
 });
 
 describe('phone numbers', function() {
   it('fetches a simple phone number', function() {
     var result = contactExercise.findPhoneNumbers('My number is 8085551234');
-    result.should.equal(['8085551234']);
+    result.should.deep.equal(['8085551234']);
   });
 
   it('fetches a phone number with dashes', function() {
     var result = contactExercise.findPhoneNumbers('My number is 808-555-1234');
-    result.should.equal(['808-555-1234']);
+    result.should.deep.equal(['808-555-1234']);
   });
 
   // CHALLENGE

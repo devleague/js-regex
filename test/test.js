@@ -1,5 +1,5 @@
 var cloudExercise = require('../cloud');
-var emailExercise = require('../contact');
+var contactExercise = require('../contact');
 var chai = require('chai');
     chai.should();
 
@@ -81,7 +81,7 @@ describe('phone numbers', function() {
 
   // CHALLENGE
   // it('fetches a phone number with the area code in parens', function() {
-  //   var result = regexExercise.findPhoneNumbers('My number is (808) 555-1234');
-  //   result.should.equal(['(808) 555-1234'])
+  //   var result = contactExercise.findPhoneNumbers('My number is (808) 555-1234');
+  //   result.should.deep.equal(['(808) 555-1234'])
   // });
 });

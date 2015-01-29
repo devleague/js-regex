@@ -57,7 +57,7 @@ describe('emails', function() {
     result.should.deep.equal(['test@test.com', 'test1@test.com']);
   });
 
-  it('does not match using @ as shorthand', function() {
+  it('does not match using @ as shorthand for the word "at"', function() {
     var result = contactExercise.findEmails('Meet me @ Waikiki');
     result.should.deep.equal([]);
   });

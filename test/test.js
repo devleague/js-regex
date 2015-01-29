@@ -1,5 +1,6 @@
 var cloudExercise = require('../cloud');
 var contactExercise = require('../contact');
+var linkExercise = require('../link');
 var chai = require('chai');
     chai.should();
 
@@ -83,5 +84,29 @@ describe('phone numbers', function() {
   // it('fetches a phone number with the area code in parens', function() {
   //   var result = contactExercise.findPhoneNumbers('My number is (808) 555-1234');
   //   result.should.deep.equal(['(808) 555-1234'])
+  // });
+});
+
+describe('links', function() {
+  it('matches href links', function() {
+    var result = linkExercise.findHRef('<a href="http://www.google.com">Google</a>');
+    result.should.deep.equal(['http://www.google.com']);
+  });
+
+  it('does not matter if the url is in single quotes', function() {
+    var result = linkExercise.findHRef("<a href='http://www.google.com'>Google</a>");
+    result.should.deep.equal(['http://www.google.com']);
+  });
+
+  // CHALLENGE
+  // it('replaces the url with another url', function() {
+  //   var result = linkExercise.replaceLink('<a href="http://www.google.com">Google</a>', "http://www.facebook.com");
+  //   result.should.equal('<a href="http://www.facebook.com">Google</a>');
+  // });
+
+  // REALLY REALLY HARD CHALLENGE
+  // it('replaces the url with another url and maintains attributes', function() {
+  //   var result = linkExercise.replaceLink('<a id="google" href="http://www.google.com" target="_blank">Google</a>', "http://www.facebook.com");
+  //   result.should.equal('<a id="google" href="http://www.facebook.com" target="_blank">Google</a>');
   // });
 });
